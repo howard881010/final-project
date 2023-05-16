@@ -6,13 +6,6 @@ body {
   margin: 0;
   overflow: hidden;
 }
-.ballcon {
-  display: block;
-  height: 15%;
-  background-color: aquamarine;
-  margin-top: 0%;
-  margin-left: 30%;
-}
 .glimmer {
   background: url("removebg-preview.png") repeat-x;
   height: 50%;
@@ -20,18 +13,42 @@ body {
   z-index: 22;
 }
 
-.role {
-  width: 7%;
-  position: absolute;
-  margin-left: 5%;
-  margin-top: 14%;
-}
-
 .bars {
   margin-bottom: 10%;
   margin-left: 3%;
   margin-right: 3%;
   width: 5%;
+}
+
+.ballcon {
+  display: flex;
+  .role {
+    display: flex;
+    animation: moveUpDown 2s linear infinite;
+    width: 7%;
+    margin-left: 33%;
+  }
+}
+
+.all-row {
+  display: flex;
+  margin-top: 550px;
+  .row {
+    display: flex;
+    animation: scroll 32s linear infinite;
+    &:nth-child(2) {
+      animation: scroll2 32s linear infinite;
+      animation-delay: -16s;
+    }
+    .bars {
+      animation: rotate 4s linear infinite;
+      width: 150px;
+      height: 150px;
+      margin: 0 40px;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 @keyframes scroll {
@@ -52,21 +69,23 @@ body {
   }
 }
 
-.all-row {
-  display: flex;
-  .row {
-    display: flex;
-    animation: scroll 20s linear infinite;
-    &:nth-child(2) {
-      animation: scroll2 20s linear infinite;
-      animation-delay: -10s;
-    }
-    .bars {
-      width: 150px;
-      height: 150px;
-      margin: 0 40px;
-      display: flex;
-      align-items: center;
-    }
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(300px);
+  }
+  50% {
+    transform: translateY(600px);
+  }
+  100% {
+    transform: translateY(300px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

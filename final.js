@@ -21,10 +21,11 @@ for (var i = 0; i < element.length; i++) {
       elem.src = colorList[0];
       elem.dataset.img = 1;
     }
+    // 隔一段時間讓bars回復原來的顏色
     setTimeout(function () {
       elem.src = originColor[0];
       elem.dataset.img = 0;
-    }, 11000);
+    }, 17000);
   };
 }
 
@@ -35,7 +36,7 @@ var catList = [
   "cat_image/cat4.png",
 ];
 var cat = document.getElementsByClassName("role");
-setTimeout(changeCat, 200);
+setTimeout(changeCat, 1100);
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
@@ -48,18 +49,20 @@ function changeCat() {
 }
 
 // 更改貓咪位置
-let cat_position = 0;
-let cat_speed = 40;
-setTimeout(catMove, 1200);
-function catMove() {
-  cat_position += cat_speed;
+// let cat_position = 0;
+// let cat_speed = 40;
+// setTimeout(catMove, 1200);
+// function catMove() {
+//   cat_position += cat_speed;
 
-  // 如果位置超過上邊界或下邊界，反轉速度
-  if (cat_position >= 200 || cat_position <= 0) {
-    cat_speed = -cat_speed;
-  }
+//   // 如果位置超過上邊界或下邊界，反轉速度
+//   if (cat_position >= 200 || cat_position <= 0) {
+//     cat_speed = -cat_speed;
+//   }
 
-  // 設定圖片的上邊距
-  cat[0].style.top = `${cat_position}px`;
-  setTimeout(catMove, 200);
-}
+//   // 設定圖片的上邊距
+//   cat[0].style.top = `${cat_position}px`;
+//   setTimeout(catMove, 200);
+// }
+
+// 判斷是否為同一個顏色
