@@ -51,7 +51,7 @@ body {
   }
 }
 
-@keyframes scroll {
+@keyframes scroll2 {
   from {
     transform: translateX(100%);
   }
@@ -60,7 +60,7 @@ body {
   }
 }
 
-@keyframes scroll2 {
+@keyframes scroll {
   from {
     transform: translateX(0%);
   }
