@@ -20,10 +20,6 @@ body {
   z-index: 22;
 }
 
-.barcon {
-  display: flex;
-}
-
 .role {
   width: 7%;
   position: absolute;
@@ -38,10 +34,39 @@ body {
   width: 5%;
 }
 
-.row {
-  width: 100%;
-  position: absolute;
-  /* margin-left: 32%; */
-  margin-top: 35%;
-  white-space: nowrap;
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+.all-row {
+  display: flex;
+  .row {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    &:nth-child(2) {
+      animation: scroll2 20s linear infinite;
+      animation-delay: -10s;
+    }
+    .bars {
+      width: 150px;
+      height: 150px;
+      margin: 0 40px;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
