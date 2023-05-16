@@ -1,0 +1,47 @@
+body {
+  background-image: url("background/pexels.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  margin: 0;
+  overflow: hidden;
+}
+.ballcon {
+  display: block;
+  height: 15%;
+  background-color: aquamarine;
+  margin-top: 0%;
+  margin-left: 30%;
+}
+.glimmer {
+  background: url("removebg-preview.png") repeat-x;
+  height: 50%;
+  bottom: 0;
+  z-index: 22;
+}
+
+.barcon {
+  display: flex;
+}
+
+.role {
+  width: 7%;
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 14%;
+}
+
+.bars {
+  margin-bottom: 10%;
+  margin-left: 3%;
+  margin-right: 3%;
+  width: 5%;
+}
+
+.row {
+  width: 100%;
+  position: absolute;
+  /* margin-left: 32%; */
+  margin-top: 35%;
+  white-space: nowrap;
+}
