@@ -3,39 +3,30 @@ function eventHandler(e) {
   e = e || window.event;
 }
 //bars變色
-var bimgList = [
+var colorList = [
   "circle_image/circle2.png",
   "circle_image/circle3.png",
   "circle_image/circle4.png",
 ];
+var originColor = ["circle_image/circle1.png"];
 var element = document.getElementsByClassName("bars");
 for (var i = 0; i < element.length; i++) {
   element[i].onclick = function (e) {
     var elem = e.target,
       imageIndex = parseInt(elem.dataset.img, 10);
-    if (imageIndex <= bimgList.length - 1) {
-      elem.src = bimgList[imageIndex++];
+    if (imageIndex <= colorList.length - 1) {
+      elem.src = colorList[imageIndex++];
       elem.dataset.img = imageIndex;
     } else {
-      elem.src = bimgList[0];
+      elem.src = colorList[0];
       elem.dataset.img = 1;
     }
+    setTimeout(function () {
+      elem.src = originColor[0];
+      elem.dataset.img = 0;
+    }, 11000);
   };
 }
-// 讓row移動
-// var row = document.getElementsByClassName("row");
-// setTimeout(rowMove, 0);
-// let rowPosition = 30;
-// let rowSpeed = 2;
-// function rowMove() {
-//   rowPosition -= rowSpeed;
-//   //console.log("rowPosition", rowPosition);
-//   if (rowPosition <= -50) {
-//     rowPosition = 100;
-//   }
-//   row[0].style.left = `${rowPosition}%`;
-//   setTimeout(rowMove, 200);
-// }
 
 // 隨機便貓咪顏色
 var catList = [
