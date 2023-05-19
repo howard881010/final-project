@@ -66,13 +66,13 @@ function changeCat() {
 // }
 
 // 判斷是否為同一個顏色
-var index = 2;
+var index = 10;
+let state;
+
 setTimeout(checkColor, 1300);
 function checkColor() {
   console.log("index", index);
-  var score = 0;
-  //console.log("index", index);
-
+  let score = 0;
   const target = [...elements].filter(function (element) {
     return element.x === 40 + index * 230;
   });
@@ -85,16 +85,6 @@ function checkColor() {
       )
     )
   );
-  // console.log(
-  //   "cat",
-  //   catList.indexOf(
-  //     cat[0].src.replace(
-  //       "file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/final%20project/",
-  //       ""
-  //     )
-  //   )
-  // );
-
   if (
     colorList.indexOf(
       target[0].src.replace(
@@ -109,7 +99,7 @@ function checkColor() {
       )
     )
   ) {
-    score += 1;
+    score++;
   } else {
     // console.log("failure");
   }
