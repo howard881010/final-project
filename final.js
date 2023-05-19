@@ -30,13 +30,13 @@ for (var i = 0; i < elements.length; i++) {
     setTimeout(function () {
       elem.src = originColor[0];
       elem.dataset.img = 0;
-    }, 17000);
+    }, 20400);
   };
 }
 
 // 隨機便貓咪顏色
 
-setTimeout(changeCat, 1100);
+setTimeout(changeCat, 1500);
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
@@ -45,34 +45,16 @@ function changeCat() {
   var num = getRandomInt(3);
   cat[0].src = catList[num];
   cat[0].dataset.img = num;
-  setTimeout(changeCat, 2000);
+  setTimeout(changeCat, 2400);
 }
 
-// 更改貓咪位置
-// let cat_position = 0;
-// let cat_speed = 40;
-// setTimeout(catMove, 1200);
-// function catMove() {
-//   cat_position += cat_speed;
-
-//   // 如果位置超過上邊界或下邊界，反轉速度
-//   if (cat_position >= 200 || cat_position <= 0) {
-//     cat_speed = -cat_speed;
-//   }
-
-//   // 設定圖片的上邊距
-//   cat[0].style.top = `${cat_position}px`;
-//   setTimeout(catMove, 200);
-// }
-
 // 判斷是否為同一個顏色
-var index = 10;
-let state;
-
-setTimeout(checkColor, 1300);
+var index = 11;
+const score = document.getElementsByClassName("score");
+let scoreInJs = 0;
+setTimeout(checkColor, 1400);
 function checkColor() {
   console.log("index", index);
-  let score = 0;
   const target = [...elements].filter(function (element) {
     return element.x === 40 + index * 230;
   });
@@ -99,11 +81,13 @@ function checkColor() {
       )
     )
   ) {
-    score++;
+    scoreInJs++;
+    score[0].textContent = scoreInJs;
   } else {
-    // console.log("failure");
+    console.log("failure");
   }
+  console.log("scoreInJs", scoreInJs);
   if (index == 15) index = 0;
   else index += 1;
-  setTimeout(checkColor, 2000);
+  setTimeout(checkColor, 2400);
 }
