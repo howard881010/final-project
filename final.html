@@ -5,34 +5,39 @@
     <link rel="stylesheet" type="text/css" href="fina.css" />
   </head>
   <body>
-    <div class="score-label" id="score-label">
-      score:&nbsp;
-      <span class="score" id="score">0</span>
+    <div id="start-page" class="start-page">
+      <h1>Welcome to the Game!</h1>
+      <button id="start-button">開始遊戲</button>
     </div>
-
-    <div class="ballcon" id="ballcon">
-      <img src="cat_image/cat2.png" class="role" id="role" />
-    </div>
-    <div class="all-row">
-      <div class="row first">
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
+    <div id="game-page" class="game-page" style="display: none">
+      <div class="score-label" id="score-label">
+        score:&nbsp;
+        <span class="score" id="score">0</span>
       </div>
-      <div class="row second">
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
-        <img src="circle_image/circle1.png" class="bars" />
+      <div class="ballcon" id="ballcon">
+        <img src="cat_image/cat2.png" class="role" id="role" />
+      </div>
+      <div class="all-row">
+        <div class="row first">
+          <img src="circle_image/circle1.png" class="bars" data-key="0" />
+          <img src="circle_image/circle1.png" class="bars" data-key="1" />
+          <img src="circle_image/circle1.png" class="bars" data-key="2" />
+          <img src="circle_image/circle1.png" class="bars" data-key="3" />
+          <img src="circle_image/circle1.png" class="bars" data-key="4" />
+          <img src="circle_image/circle1.png" class="bars" data-key="5" />
+          <img src="circle_image/circle1.png" class="bars" data-key="6" />
+          <img src="circle_image/circle1.png" class="bars" data-key="7" />
+        </div>
+        <div class="row second">
+          <img src="circle_image/circle1.png" class="bars" data-key="8" />
+          <img src="circle_image/circle1.png" class="bars" data-key="9" />
+          <img src="circle_image/circle1.png" class="bars" data-key="10" />
+          <img src="circle_image/circle1.png" class="bars" data-key="11" />
+          <img src="circle_image/circle1.png" class="bars" data-key="12" />
+          <img src="circle_image/circle1.png" class="bars" data-key="13" />
+          <img src="circle_image/circle1.png" class="bars" data-key="14" />
+          <img src="circle_image/circle1.png" class="bars" data-key="15" />
+        </div>
       </div>
     </div>
 
